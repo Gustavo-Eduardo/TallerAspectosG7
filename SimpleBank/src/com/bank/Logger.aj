@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 public aspect Logger {
 	final private String FILE_NAME = "Log.txt";
-	final private File file = new File("Log.txt");
+	final private File file = new File(FILE_NAME);
     final private Calendar cal = Calendar.getInstance();
     final private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
 	 
