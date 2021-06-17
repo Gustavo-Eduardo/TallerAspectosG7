@@ -16,6 +16,28 @@ public aspect Logger {
 	pointcut transaccion() : call(* moneyMakeTransaction( .. ) );
 	pointcut retiro(): call(* moneyWithdrawal( .. ));
 	
+	after():transaccion()
+	{
+
+		final LocalDateTime now = LocalDateTime.now();
+		final String currentDateTime = dtf.format(now);
+		final String loggingMessage = currentDateTime +" -> LLamada a transaccion\n";
+				 
+		try
+		{
+
+			final FileWriter fw = new FileWriter(file,true);
+			
+			fw.append(loggingMessage);
+			System.out.println(loggingMessage);
+			fw.close();
+		}
+		catch(IOException e)	
+		{
+			System.out.println("Acaba de ocurrir un error.");
+		    e.printStackTrace();
+		}
+	}
 	after():retiro()
 	{
 
@@ -34,12 +56,12 @@ public aspect Logger {
 		}
 		catch(IOException e)	
 		{
-			System.out.println("An error occurred.");
+			System.out.println("Acaba de ocurrir un error.");
 		    e.printStackTrace();
 		}
 		
 	}
 	
 
-
 }
+

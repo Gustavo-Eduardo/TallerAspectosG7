@@ -1,2 +1,9 @@
 2021/06/16 16:12:47 -> LLamada a retiro
 2021/06/16 16:13:02 -> LLamada a retiro
+2021/06/16 19:44:03 -> LLamada a transaccion
+2021/06/16 19:44:39 -> LLamada a transaccion
+2021/06/16 19:45:25 -> LLamada a retiro
+2021/06/16 19:47:30 -> LLamada a retiro
+2021/06/16 19:51:28 -> LLamada a transaccion
+2021/06/16 20:16:56 -> LLamada a transaccion
+2021/06/16 20:17:29 -> LLamada a retiro
